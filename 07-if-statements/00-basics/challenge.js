@@ -20,30 +20,29 @@ module.exports.checkLock = function(x,y,w,z){
   }
     };
 
+/* below works too
+/*module.exports.canIGet = function(item, money) {
+  if (money >= 1 && item == 'Apple Sticker') {
+    return true;
+  } else if (money >= 999 && item == 'MacBook Air') {
+    return true;
+  } else if (money >= 1299 && item == 'MacBook Pro') {
+    return true;
+  } else if (money >= 2499 && item == 'Mac Pro') {
+    return true;
+  } else {
+    return false;
+  }
+};
+*/
+
 module.exports.canIGet = function(item,money){
   if ((item === 'MacBook Air' && money >= 999) || (item === "MacBook Pro" && money >= 1299)||(item === "Mac Pro" && money >= 2499)||(item === "Apple Sticker" && money >= 1)) {
-    return 'true'; 
+    return true; 
   }
-  else {(item !== "MacBook Air" || item !== "MacBook Pro" || item !== "Mac Pro" || item !== "Apple Sticker")
-    return "false";
+  else {
+    return false;
   }
 };
 
 
-//module.exports.canIGet = function(item,money){
- // if (item === 'MacBook Air' && money >= 999) {
-  //  return 'true'; 
- // }
-  //else if (item === "MacBook Pro" && money >= 1299){
-   // return "true";
- // }
-  //else if (item === "Mac Pro" && money >= 2499){
-  //  return "true";
- // }
-  //else if (item === "Apple Sticker" && money >= 1){
-   // return "true";
- // }
-  //else {(item !== "MacBook Air" || item !== "MacBook Pro" || item !== "Mac Pro" || item !== "Apple Sticker")
-   // return "false";
- // }
-//}; 
